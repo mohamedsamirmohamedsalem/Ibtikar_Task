@@ -15,6 +15,9 @@
 		60E8E729263D7D24008BEF33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60E8E727263D7D24008BEF33 /* LaunchScreen.storyboard */; };
 		60E8E734263D7D24008BEF33 /* Ibtikar_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E8E733263D7D24008BEF33 /* Ibtikar_TaskTests.swift */; };
 		60E8E73F263D7D24008BEF33 /* Ibtikar_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E8E73E263D7D24008BEF33 /* Ibtikar_TaskUITests.swift */; };
+		60E8E75A263D7ED9008BEF33 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E8E759263D7ED9008BEF33 /* CategoriesModel.swift */; };
+		60E8E763263D7EF3008BEF33 /* ChannelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E8E762263D7EF3008BEF33 /* ChannelsModel.swift */; };
+		60E8E768263D7F0E008BEF33 /* MediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E8E767263D7F0E008BEF33 /* MediaModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		60E8E73A263D7D24008BEF33 /* Ibtikar_TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ibtikar_TaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60E8E73E263D7D24008BEF33 /* Ibtikar_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ibtikar_TaskUITests.swift; sourceTree = "<group>"; };
 		60E8E740263D7D24008BEF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60E8E759263D7ED9008BEF33 /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
+		60E8E762263D7EF3008BEF33 /* ChannelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsModel.swift; sourceTree = "<group>"; };
+		60E8E767263D7F0E008BEF33 /* MediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		60E8E71B263D7D23008BEF33 /* Ibtikar_Task */ = {
 			isa = PBXGroup;
 			children = (
+				60E8E758263D7EB7008BEF33 /* Model */,
 				60E8E754263D7D76008BEF33 /* Resources */,
 				60E8E753263D7D68008BEF33 /* Core */,
 				60E8E750263D7D3C008BEF33 /* View */,
@@ -174,6 +181,16 @@
 				60E8E72A263D7D24008BEF33 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		60E8E758263D7EB7008BEF33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60E8E759263D7ED9008BEF33 /* CategoriesModel.swift */,
+				60E8E762263D7EF3008BEF33 /* ChannelsModel.swift */,
+				60E8E767263D7F0E008BEF33 /* MediaModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,8 +324,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				60E8E721263D7D23008BEF33 /* ViewController.swift in Sources */,
+				60E8E75A263D7ED9008BEF33 /* CategoriesModel.swift in Sources */,
+				60E8E768263D7F0E008BEF33 /* MediaModel.swift in Sources */,
 				60E8E71D263D7D23008BEF33 /* AppDelegate.swift in Sources */,
 				60E8E71F263D7D23008BEF33 /* SceneDelegate.swift in Sources */,
+				60E8E763263D7EF3008BEF33 /* ChannelsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
