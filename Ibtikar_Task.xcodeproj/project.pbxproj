@@ -99,13 +99,10 @@
 		60E8E71B263D7D23008BEF33 /* Ibtikar_Task */ = {
 			isa = PBXGroup;
 			children = (
-				60E8E71C263D7D23008BEF33 /* AppDelegate.swift */,
-				60E8E71E263D7D23008BEF33 /* SceneDelegate.swift */,
-				60E8E720263D7D23008BEF33 /* ViewController.swift */,
-				60E8E722263D7D23008BEF33 /* Main.storyboard */,
-				60E8E725263D7D24008BEF33 /* Assets.xcassets */,
-				60E8E727263D7D24008BEF33 /* LaunchScreen.storyboard */,
-				60E8E72A263D7D24008BEF33 /* Info.plist */,
+				60E8E754263D7D76008BEF33 /* Resources */,
+				60E8E753263D7D68008BEF33 /* Core */,
+				60E8E750263D7D3C008BEF33 /* View */,
+				60E8E74F263D7D34008BEF33 /* Controller */,
 			);
 			path = Ibtikar_Task;
 			sourceTree = "<group>";
@@ -126,6 +123,57 @@
 				60E8E740263D7D24008BEF33 /* Info.plist */,
 			);
 			path = Ibtikar_TaskUITests;
+			sourceTree = "<group>";
+		};
+		60E8E74F263D7D34008BEF33 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				60E8E720263D7D23008BEF33 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		60E8E750263D7D3C008BEF33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				60E8E752263D7D50008BEF33 /* Cell */,
+				60E8E751263D7D44008BEF33 /* Stroyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60E8E751263D7D44008BEF33 /* Stroyboard */ = {
+			isa = PBXGroup;
+			children = (
+				60E8E722263D7D23008BEF33 /* Main.storyboard */,
+				60E8E727263D7D24008BEF33 /* LaunchScreen.storyboard */,
+			);
+			path = Stroyboard;
+			sourceTree = "<group>";
+		};
+		60E8E752263D7D50008BEF33 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		60E8E753263D7D68008BEF33 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				60E8E71E263D7D23008BEF33 /* SceneDelegate.swift */,
+				60E8E71C263D7D23008BEF33 /* AppDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		60E8E754263D7D76008BEF33 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				60E8E725263D7D24008BEF33 /* Assets.xcassets */,
+				60E8E72A263D7D24008BEF33 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,7 +486,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4A3GDCJZQY;
-				INFOPLIST_FILE = Ibtikar_Task/Info.plist;
+				INFOPLIST_FILE = Ibtikar_Task/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +505,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4A3GDCJZQY;
-				INFOPLIST_FILE = Ibtikar_Task/Info.plist;
+				INFOPLIST_FILE = Ibtikar_Task/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
