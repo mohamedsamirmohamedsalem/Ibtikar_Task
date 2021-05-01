@@ -22,8 +22,8 @@
                         <color key="textColor" red="0.58455270530000003" green="0.5956804752" blue="0.61568963529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sK7-9O-vMr">
-                        <rect key="frame" x="0.0" y="101" width="452" height="280"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="NewEpisodesTableViewCell" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sK7-9O-vMr">
+                        <rect key="frame" x="0.0" y="91" width="472" height="301"/>
                         <color key="backgroundColor" red="0.14150178429999999" green="0.15235528349999999" blue="0.18039593100000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TBs-YX-6j1">
                             <size key="itemSize" width="128" height="128"/>
@@ -31,6 +31,10 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="ucW-Si-zhH"/>
+                            <outlet property="delegate" destination="-1" id="Sbh-g2-AIJ"/>
+                        </connections>
                     </collectionView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2A-iS-dT0">
                         <rect key="frame" x="0.0" y="20" width="103" height="29"/>
@@ -41,21 +45,21 @@
                 </subviews>
                 <color key="backgroundColor" red="0.14150178429999999" green="0.15235528349999999" blue="0.18039593100000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 <constraints>
+                    <constraint firstItem="sK7-9O-vMr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1pm-Wz-7l8"/>
                     <constraint firstItem="f2A-iS-dT0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ghy-gn-wkB"/>
                     <constraint firstItem="lui-fO-bSn" firstAttribute="leading" secondItem="f2A-iS-dT0" secondAttribute="leading" id="J5h-lO-kFm"/>
                     <constraint firstItem="f2A-iS-dT0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="J8D-zi-Qkb"/>
                     <constraint firstItem="lui-fO-bSn" firstAttribute="top" secondItem="f2A-iS-dT0" secondAttribute="bottom" constant="25" id="LPk-36-QTo"/>
-                    <constraint firstItem="sK7-9O-vMr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="MdR-ni-9iw"/>
-                    <constraint firstItem="sK7-9O-vMr" firstAttribute="top" secondItem="lui-fO-bSn" secondAttribute="bottom" constant="10" id="T44-1u-ROV"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="sK7-9O-vMr" secondAttribute="bottom" id="Yg2-4b-WBp"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="sK7-9O-vMr" secondAttribute="trailing" id="eZT-bE-eb5"/>
+                    <constraint firstAttribute="trailing" secondItem="sK7-9O-vMr" secondAttribute="trailing" id="cQH-7U-fZ5"/>
+                    <constraint firstAttribute="bottom" secondItem="sK7-9O-vMr" secondAttribute="bottom" id="cxw-YQ-erN"/>
+                    <constraint firstItem="sK7-9O-vMr" firstAttribute="top" secondItem="lui-fO-bSn" secondAttribute="bottom" id="tHY-bS-hI9"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collectionView" destination="sK7-9O-vMr" id="Xe4-ak-uUh"/>
             </connections>
-            <point key="canvasLocation" x="-136.23188405797103" y="109.82142857142857"/>
+            <point key="canvasLocation" x="-304.34782608695656" y="107.8125"/>
         </tableViewCell>
     </objects>
 </document>

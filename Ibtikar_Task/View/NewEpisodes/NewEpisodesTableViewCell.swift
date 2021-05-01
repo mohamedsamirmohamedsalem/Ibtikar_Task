@@ -43,11 +43,14 @@ extension NewEpisodesTableViewCell : UICollectionViewDelegate , UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeue(IndexPath: indexPath) as GenericCollectionViewCell
-        cell.layer.backgroundColor = UIColor.clear.cgColor
+        cell.title.text = "adadad"
+        cell.subTitle.text = "sadsdssddsdsdsdsd"
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: SCREEN_WIDTH / 3.5 , height: SCREEN_HEIGHT / 5)
+        return CGSize(width: 150 , height: 310)
     }
+    
+    
 }

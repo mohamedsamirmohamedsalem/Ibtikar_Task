@@ -44,7 +44,7 @@ class MainViewController: UIViewController {
     //This Funvtion to register cell in tableview
     private func registerNibFiles(){
         tableView.RegisterNib(Cell: NewEpisodesTableViewCell.self)
-        //        tableView.RegisterNib(Cell: ComicsTableViewCell.self)
+        tableView.RegisterNib(Cell: MainTableViewCell.self)
         //        tableView.RegisterNib(Cell: RelatedLinksTableViewCell.self)
         tableView.reloadData()
         
@@ -54,9 +54,7 @@ class MainViewController: UIViewController {
         loadingApiChannelsData = true
         DispatchQueue.main.async {
             let url = "https://pastebin.com/raw/Xt12uVhM"
-            APIManager.get(url: url, parameter: nil, headers: nil
-                    , completion: { (check, Response : ChannelsModel?) in
-                        
+            APIManager.get(url: url, parameter: nil, headers: nil, completion: { (check,Response:ChannelsModel?) in
                         guard let response = Response else {return}
                         self.channels = response.data?.channels ?? []
                         self.tableView.reloadData()
