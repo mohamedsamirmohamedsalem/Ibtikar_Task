@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E438154D602081513C8B78B /* Pods_Ibtikar_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C14DE9FBA8D3292C3D1AAA /* Pods_Ibtikar_Task.framework */; };
+		25EB99F85033CCD78066D939 /* Pods_Ibtikar_Task_Ibtikar_TaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46CDB913EF05006438414514 /* Pods_Ibtikar_Task_Ibtikar_TaskUITests.framework */; };
 		60E8E71D263D7D23008BEF33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E8E71C263D7D23008BEF33 /* AppDelegate.swift */; };
 		60E8E71F263D7D23008BEF33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E8E71E263D7D23008BEF33 /* SceneDelegate.swift */; };
 		60E8E721263D7D23008BEF33 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E8E720263D7D23008BEF33 /* MainViewController.swift */; };
@@ -28,6 +30,9 @@
 		60E8E7AF263D9556008BEF33 /* UICollectionView+Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E8E7AC263D9555008BEF33 /* UICollectionView+Generics.swift */; };
 		60E8E7BB263D9664008BEF33 /* GenericCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E8E7B9263D9664008BEF33 /* GenericCollectionViewCell.swift */; };
 		60E8E7BC263D9664008BEF33 /* GenericCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60E8E7BA263D9664008BEF33 /* GenericCollectionViewCell.xib */; };
+		60E8E7C6263DA577008BEF33 /* ImageCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E8E7C5263DA577008BEF33 /* ImageCorners.swift */; };
+		60E8E7CC263DA62C008BEF33 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E8E7CB263DA62C008BEF33 /* ApiManager.swift */; };
+		82610A4CCB5659692C90F3C0 /* Pods_Ibtikar_TaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B97BC11A12B29EB1E533FF5 /* Pods_Ibtikar_TaskTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0ABC5ACA6AB618DA3F3E71D4 /* Pods-Ibtikar_Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ibtikar_Task.debug.xcconfig"; path = "Target Support Files/Pods-Ibtikar_Task/Pods-Ibtikar_Task.debug.xcconfig"; sourceTree = "<group>"; };
+		38C3149E07EBED0C1974789D /* Pods-Ibtikar_TaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ibtikar_TaskTests.debug.xcconfig"; path = "Target Support Files/Pods-Ibtikar_TaskTests/Pods-Ibtikar_TaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3C0549BA735166C9E7033DA1 /* Pods-Ibtikar_Task-Ibtikar_TaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ibtikar_Task-Ibtikar_TaskUITests.release.xcconfig"; path = "Target Support Files/Pods-Ibtikar_Task-Ibtikar_TaskUITests/Pods-Ibtikar_Task-Ibtikar_TaskUITests.release.xcconfig"; sourceTree = "<group>"; };
+		46CDB913EF05006438414514 /* Pods_Ibtikar_Task_Ibtikar_TaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ibtikar_Task_Ibtikar_TaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B97BC11A12B29EB1E533FF5 /* Pods_Ibtikar_TaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ibtikar_TaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60E8E719263D7D23008BEF33 /* Ibtikar_Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ibtikar_Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60E8E71C263D7D23008BEF33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60E8E71E263D7D23008BEF33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +85,12 @@
 		60E8E7AC263D9555008BEF33 /* UICollectionView+Generics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Generics.swift"; sourceTree = "<group>"; };
 		60E8E7B9263D9664008BEF33 /* GenericCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCollectionViewCell.swift; sourceTree = "<group>"; };
 		60E8E7BA263D9664008BEF33 /* GenericCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericCollectionViewCell.xib; sourceTree = "<group>"; };
+		60E8E7C5263DA577008BEF33 /* ImageCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCorners.swift; sourceTree = "<group>"; };
+		60E8E7CB263DA62C008BEF33 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		94C14DE9FBA8D3292C3D1AAA /* Pods_Ibtikar_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ibtikar_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0D11807B128ED638A16C689 /* Pods-Ibtikar_TaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ibtikar_TaskTests.release.xcconfig"; path = "Target Support Files/Pods-Ibtikar_TaskTests/Pods-Ibtikar_TaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		CB9CFED43893812D6725D51B /* Pods-Ibtikar_Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ibtikar_Task.release.xcconfig"; path = "Target Support Files/Pods-Ibtikar_Task/Pods-Ibtikar_Task.release.xcconfig"; sourceTree = "<group>"; };
+		E03003800F6D36507F79E50D /* Pods-Ibtikar_Task-Ibtikar_TaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ibtikar_Task-Ibtikar_TaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-Ibtikar_Task-Ibtikar_TaskUITests/Pods-Ibtikar_Task-Ibtikar_TaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E438154D602081513C8B78B /* Pods_Ibtikar_Task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82610A4CCB5659692C90F3C0 /* Pods_Ibtikar_TaskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +114,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25EB99F85033CCD78066D939 /* Pods_Ibtikar_Task_Ibtikar_TaskUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1128FA867B8C3963CEF146ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0ABC5ACA6AB618DA3F3E71D4 /* Pods-Ibtikar_Task.debug.xcconfig */,
+				CB9CFED43893812D6725D51B /* Pods-Ibtikar_Task.release.xcconfig */,
+				E03003800F6D36507F79E50D /* Pods-Ibtikar_Task-Ibtikar_TaskUITests.debug.xcconfig */,
+				3C0549BA735166C9E7033DA1 /* Pods-Ibtikar_Task-Ibtikar_TaskUITests.release.xcconfig */,
+				38C3149E07EBED0C1974789D /* Pods-Ibtikar_TaskTests.debug.xcconfig */,
+				B0D11807B128ED638A16C689 /* Pods-Ibtikar_TaskTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		145DDA9E1855A6740BD24857 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94C14DE9FBA8D3292C3D1AAA /* Pods_Ibtikar_Task.framework */,
+				46CDB913EF05006438414514 /* Pods_Ibtikar_Task_Ibtikar_TaskUITests.framework */,
+				4B97BC11A12B29EB1E533FF5 /* Pods_Ibtikar_TaskTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		60E8E710263D7D23008BEF33 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +152,8 @@
 				60E8E732263D7D24008BEF33 /* Ibtikar_TaskTests */,
 				60E8E73D263D7D24008BEF33 /* Ibtikar_TaskUITests */,
 				60E8E71A263D7D23008BEF33 /* Products */,
+				1128FA867B8C3963CEF146ED /* Pods */,
+				145DDA9E1855A6740BD24857 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +170,8 @@
 		60E8E71B263D7D23008BEF33 /* Ibtikar_Task */ = {
 			isa = PBXGroup;
 			children = (
+				60E8E7C4263DA568008BEF33 /* Layout */,
+				60E8E7C5263DA577008BEF33 /* ImageCorners.swift */,
 				60E8E7A9263D9555008BEF33 /* Extention */,
 				60E8E7A3263D94FD008BEF33 /* Data */,
 				60E8E758263D7EB7008BEF33 /* Model */,
@@ -213,6 +260,7 @@
 		60E8E758263D7EB7008BEF33 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				60E8E7CA263DA60D008BEF33 /* APIManager */,
 				60E8E759263D7ED9008BEF33 /* CategoriesModel.swift */,
 				60E8E762263D7EF3008BEF33 /* ChannelsModel.swift */,
 				60E8E767263D7F0E008BEF33 /* MediaModel.swift */,
@@ -255,6 +303,21 @@
 			path = GenericCell;
 			sourceTree = "<group>";
 		};
+		60E8E7C4263DA568008BEF33 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		60E8E7CA263DA60D008BEF33 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				60E8E7CB263DA62C008BEF33 /* ApiManager.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -262,9 +325,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60E8E743263D7D24008BEF33 /* Build configuration list for PBXNativeTarget "Ibtikar_Task" */;
 			buildPhases = (
+				800FC67410C2D6EA463D034E /* [CP] Check Pods Manifest.lock */,
 				60E8E715263D7D23008BEF33 /* Sources */,
 				60E8E716263D7D23008BEF33 /* Frameworks */,
 				60E8E717263D7D23008BEF33 /* Resources */,
+				F4CD9F9DD30CC80F92DCC48A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -279,6 +344,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60E8E746263D7D24008BEF33 /* Build configuration list for PBXNativeTarget "Ibtikar_TaskTests" */;
 			buildPhases = (
+				BDCEC4065BBDAED37428D351 /* [CP] Check Pods Manifest.lock */,
 				60E8E72B263D7D24008BEF33 /* Sources */,
 				60E8E72C263D7D24008BEF33 /* Frameworks */,
 				60E8E72D263D7D24008BEF33 /* Resources */,
@@ -297,9 +363,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60E8E749263D7D24008BEF33 /* Build configuration list for PBXNativeTarget "Ibtikar_TaskUITests" */;
 			buildPhases = (
+				2ED4B2687D057FA660A53243 /* [CP] Check Pods Manifest.lock */,
 				60E8E736263D7D24008BEF33 /* Sources */,
 				60E8E737263D7D24008BEF33 /* Frameworks */,
 				60E8E738263D7D24008BEF33 /* Resources */,
+				CA2C80F056DD835A910CDF83 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -382,13 +450,118 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2ED4B2687D057FA660A53243 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ibtikar_Task-Ibtikar_TaskUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		800FC67410C2D6EA463D034E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ibtikar_Task-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDCEC4065BBDAED37428D351 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ibtikar_TaskTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA2C80F056DD835A910CDF83 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ibtikar_Task-Ibtikar_TaskUITests/Pods-Ibtikar_Task-Ibtikar_TaskUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ibtikar_Task-Ibtikar_TaskUITests/Pods-Ibtikar_Task-Ibtikar_TaskUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ibtikar_Task-Ibtikar_TaskUITests/Pods-Ibtikar_Task-Ibtikar_TaskUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4CD9F9DD30CC80F92DCC48A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ibtikar_Task/Pods-Ibtikar_Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ibtikar_Task/Pods-Ibtikar_Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ibtikar_Task/Pods-Ibtikar_Task-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		60E8E715263D7D23008BEF33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60E8E7CC263DA62C008BEF33 /* ApiManager.swift in Sources */,
 				60E8E721263D7D23008BEF33 /* MainViewController.swift in Sources */,
 				60E8E7A5263D950D008BEF33 /* Constants.swift in Sources */,
+				60E8E7C6263DA577008BEF33 /* ImageCorners.swift in Sources */,
 				60E8E7BB263D9664008BEF33 /* GenericCollectionViewCell.swift in Sources */,
 				60E8E75A263D7ED9008BEF33 /* CategoriesModel.swift in Sources */,
 				60E8E776263D89F6008BEF33 /* MainViewController+UI.swift in Sources */,
@@ -573,6 +746,7 @@
 		};
 		60E8E744263D7D24008BEF33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ABC5ACA6AB618DA3F3E71D4 /* Pods-Ibtikar_Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -592,6 +766,7 @@
 		};
 		60E8E745263D7D24008BEF33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB9CFED43893812D6725D51B /* Pods-Ibtikar_Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -611,6 +786,7 @@
 		};
 		60E8E747263D7D24008BEF33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38C3149E07EBED0C1974789D /* Pods-Ibtikar_TaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -633,6 +809,7 @@
 		};
 		60E8E748263D7D24008BEF33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0D11807B128ED638A16C689 /* Pods-Ibtikar_TaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -655,6 +832,7 @@
 		};
 		60E8E74A263D7D24008BEF33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E03003800F6D36507F79E50D /* Pods-Ibtikar_Task-Ibtikar_TaskUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -675,6 +853,7 @@
 		};
 		60E8E74B263D7D24008BEF33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C0549BA735166C9E7033DA1 /* Pods-Ibtikar_Task-Ibtikar_TaskUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -32,7 +32,7 @@ class MainViewController: UIViewController {
         if channels.count == 0{
             self.initActivityIndicator()
         }
-  
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
@@ -40,36 +40,30 @@ class MainViewController: UIViewController {
         tableView.beginUpdates()
         tableView.endUpdates()
         tableView.reloadData()
-        
-       
     }
     //This Funvtion to register cell in tableview
     private func registerNibFiles(){
         tableView.RegisterNib(Cell: NewEpisodesTableViewCell.self)
-//        tableView.RegisterNib(Cell: ComicsTableViewCell.self)
-//        tableView.RegisterNib(Cell: RelatedLinksTableViewCell.self)
+        //        tableView.RegisterNib(Cell: ComicsTableViewCell.self)
+        //        tableView.RegisterNib(Cell: RelatedLinksTableViewCell.self)
         tableView.reloadData()
         
     }
     
     func loadData(){
         loadingApiData = true
-//        requestCharacter.loadCharacters(name: nameSearch, page: currentPage) { (response) in
-//            switch response {
-//            case .success(let model):
-//                self.total = model.data.total
-//                self.categories.append(contentsOf: model.data.results)
-//                self.tableView.reloadData()
-//                self.activityIndicator.stopAnimating()
-//                self.loadingApiData = false
-//            case .serverError(let description):
-//                print("Server error: \(description) \n")
-//            case .noConnection(let description):
-//                print("Server error noConnection: \(description) \n")
-//            case .timeOut(let description):
-//                print("Server error timeOut: \(description) \n")
-//            }
-//        }
+        DispatchQueue.main.async {
+            let url = "https://pastebin.com/raw/Xt12uVhM"
+            API.get(url: url, parameter: nil, headers: nil
+                    , completion: { (check, Response : [ProvidersByCatagories]?) in
+                        
+                        guard let response = Response else {return}
+                        self.categories.append(contentsOf:response)
+                        self.tableView.reloadData()
+                        self.activityIndicator.stopAnimating()
+                        self.loadingApiData = false
+                    })
+        }
     }
     
 }
