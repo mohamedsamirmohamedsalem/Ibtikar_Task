@@ -10,8 +10,8 @@ import UIKit
 class MainViewController: UIViewController {
     
     //MARK:- Instances
-    var loadingApiData = false
-    var channels: [ChannelsModel] = []
+    var loadingApiChannelsData = false
+    var channels: [Channel] = []
     var activityIndicator: UIActivityIndicatorView?
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //MARK:- IBOutlets
@@ -51,17 +51,17 @@ class MainViewController: UIViewController {
     }
     
     func loadData(){
-        loadingApiData = true
+        loadingApiChannelsData = true
         DispatchQueue.main.async {
             let url = "https://pastebin.com/raw/Xt12uVhM"
-            API.get(url: url, parameter: nil, headers: nil
-                    , completion: { (check, Response : [ProvidersByCatagories]?) in
+            APIManager.get(url: url, parameter: nil, headers: nil
+                    , completion: { (check, Response : ChannelsModel?) in
                         
                         guard let response = Response else {return}
-                        self.categories.append(contentsOf:response)
+                        self.channels = response.data?.channels ?? []
                         self.tableView.reloadData()
-                        self.activityIndicator.stopAnimating()
-                        self.loadingApiData = false
+                        self.activityIndicator?.stopAnimating()
+                        self.loadingApiChannelsData = false
                     })
         }
     }
