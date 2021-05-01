@@ -16,22 +16,27 @@ extension MainViewController : UITableViewDataSource{
     }
     
     // deque cell according to number of Categories with in each time dequing a cell  (Data Source Method)
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if indexPath.section == 0 {
-            let cell = tableView.dequeue(IndexPath: indexPath) as NewEpisodesTableViewCell
-            cell.reloadData()
-            return cell
-        }else if  indexPath.section == 4  {
-        return UITableViewCell()
-        }else if  indexPath.section == 8  {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        if self.channels.isEmpty {
             return UITableViewCell()
         }else{
-            let cell = tableView.dequeue(IndexPath: indexPath) as MainTableViewCell
-            cell.reloadData()
-            return cell
+            if indexPath.section == 0 {
+                let cell = tableView.dequeue(IndexPath: indexPath) as NewEpisodesTableViewCell
+                cell.reloadData()
+                return cell
+            }else if  indexPath.section == 4  {
+            return UITableViewCell()
+            }else if  indexPath.section == 8  {
+                return UITableViewCell()
+            }else{
+                
+                let cell = tableView.dequeue(IndexPath: indexPath) as MainTableViewCell
+                cell.getApiData(channel: self.channels[indexPath.row])
+                cell.reloadData()
+                return cell
+            }
         }
-        //this for change backgroundColor of cell when select it
+    
        
     }
 }

@@ -45,7 +45,7 @@ class MainViewController: UIViewController {
     private func registerNibFiles(){
         tableView.RegisterNib(Cell: NewEpisodesTableViewCell.self)
         tableView.RegisterNib(Cell: MainTableViewCell.self)
-        //        tableView.RegisterNib(Cell: RelatedLinksTableViewCell.self)
+        // tableView.RegisterNib(Cell: RelatedLinksTableViewCell.self)
         tableView.reloadData()
         
     }

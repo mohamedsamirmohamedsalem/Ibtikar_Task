@@ -8,7 +8,10 @@
 import UIKit
 
 class MainTableViewCell: UITableViewCell {
-
+    
+    //MARK:- Instances
+    var channel: Channel?
+    
     //MARK : IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -34,6 +37,9 @@ class MainTableViewCell: UITableViewCell {
         func reloadData() {
             collectionView.reloadData()
        }
+    func getApiData(channel: Channel){
+        self.channel = channel
+    }
 }
 /////////////////////////////////////////////////////////////////////////////////////
 extension MainTableViewCell : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
@@ -43,7 +49,11 @@ extension MainTableViewCell : UICollectionViewDelegate , UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeue(IndexPath: indexPath) as SeriesCollectionViewCell
-
+        cell.mainTitle.text =  channel?.title
+        cell.subTitle.text = String(channel?.mediaCount ?? 0) + " episodes"
+        //cell.image.image = getImage(channel?.iconAsset )
+        cell.seriesImage.image = getImage(channel?.iconAsset?.url ?? "")
+        cell.seriesTitle.text = channel?.latestMedia?[indexPath.row].title
         return cell
     }
     
@@ -52,4 +62,18 @@ extension MainTableViewCell : UICollectionViewDelegate , UICollectionViewDataSou
     }
     
     
+    func getImage(_ url :String)->UIImage{
+        var image = UIImage()
+        if let url = URL(string: url) {
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                guard let data = data, error == nil else { return }
+                DispatchQueue.main.async { /// execute on main thread
+                    image =  UIImage(data: data) ?? UIImage()
+            
+                }
+            }
+            task.resume()
+        }
+        return image
+    }
 }
