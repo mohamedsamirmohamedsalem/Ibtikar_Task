@@ -206,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				60E8E7C4263DA568008BEF33 /* Layout */,
-				60E8E7C5263DA577008BEF33 /* ImageCorners.swift */,
 				60E8E7A9263D9555008BEF33 /* Extention */,
 				60E8E7A3263D94FD008BEF33 /* Data */,
 				60E8E758263D7EB7008BEF33 /* Model */,
@@ -344,6 +343,7 @@
 		60E8E7C4263DA568008BEF33 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				60E8E7C5263DA577008BEF33 /* ImageCorners.swift */,
 				60DD9AB1263ED467009DA583 /* ViewCorners.swift */,
 			);
 			path = Layout;
