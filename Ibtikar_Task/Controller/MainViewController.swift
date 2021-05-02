@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
     //MARK:- Instances
     var loadingApiChannelsData = false
     var channels: [Channel] = []
+    var categories : [Category] = []
     var activityIndicator: UIActivityIndicatorView?
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //MARK:- IBOutlets
@@ -45,7 +46,7 @@ class MainViewController: UIViewController {
     private func registerNibFiles(){
         tableView.RegisterNib(Cell: NewEpisodesTableViewCell.self)
         tableView.RegisterNib(Cell: MainTableViewCell.self)
-        // tableView.RegisterNib(Cell: RelatedLinksTableViewCell.self)
+        tableView.RegisterNib(Cell: CategoryTableViewCell.self)
         tableView.reloadData()
         
     }
@@ -53,14 +54,23 @@ class MainViewController: UIViewController {
     func loadData(){
         loadingApiChannelsData = true
         DispatchQueue.main.async {
-            let url = "https://pastebin.com/raw/Xt12uVhM"
-            APIManager.get(url: url, parameter: nil, headers: nil, completion: { (check,Response:ChannelsModel?) in
-                        guard let response = Response else {return}
-                        self.channels = response.data?.channels ?? []
-                        self.tableView.reloadData()
-                        self.activityIndicator?.stopAnimating()
-                        self.loadingApiChannelsData = false
-                    })
+            let channelUrl = "https://pastebin.com/raw/Xt12uVhM"
+            let categoryUrl = "https://pastebin.com/raw/A0CgArX3"
+            APIManager.get(url: channelUrl, parameter: nil, headers: nil, completion: { (check,Response:ChannelsModel?) in
+                guard let response = Response else {return}
+                self.channels = response.data?.channels ?? []
+                self.tableView.reloadData()
+            })
+        }
+        DispatchQueue.main.async {
+            let categoryUrl = "https://pastebin.com/raw/A0CgArX3"
+            APIManager.get(url: categoryUrl, parameter: nil, headers: nil, completion: { (check,Response:CategoriesModel?) in
+                guard let response = Response else {return}
+                self.categories = response.data?.categories ?? []
+                self.tableView.reloadData()
+                self.activityIndicator?.stopAnimating()
+                self.loadingApiChannelsData = false
+            })
         }
     }
     

@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1E438154D602081513C8B78B /* Pods_Ibtikar_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C14DE9FBA8D3292C3D1AAA /* Pods_Ibtikar_Task.framework */; };
 		25EB99F85033CCD78066D939 /* Pods_Ibtikar_Task_Ibtikar_TaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46CDB913EF05006438414514 /* Pods_Ibtikar_Task_Ibtikar_TaskUITests.framework */; };
+		60DD9A9E263ED16F009DA583 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DD9A9C263ED16F009DA583 /* CategoryTableViewCell.swift */; };
+		60DD9A9F263ED16F009DA583 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60DD9A9D263ED16F009DA583 /* CategoryTableViewCell.xib */; };
+		60DD9AA9263ED3D1009DA583 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DD9AA7263ED3D1009DA583 /* CategoryCollectionViewCell.swift */; };
+		60DD9AAA263ED3D1009DA583 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60DD9AA8263ED3D1009DA583 /* CategoryCollectionViewCell.xib */; };
+		60DD9AB2263ED467009DA583 /* ViewCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DD9AB1263ED467009DA583 /* ViewCorners.swift */; };
 		60E8E71D263D7D23008BEF33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E8E71C263D7D23008BEF33 /* AppDelegate.swift */; };
 		60E8E71F263D7D23008BEF33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E8E71E263D7D23008BEF33 /* SceneDelegate.swift */; };
 		60E8E721263D7D23008BEF33 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E8E720263D7D23008BEF33 /* MainViewController.swift */; };
@@ -62,6 +67,11 @@
 		3C0549BA735166C9E7033DA1 /* Pods-Ibtikar_Task-Ibtikar_TaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ibtikar_Task-Ibtikar_TaskUITests.release.xcconfig"; path = "Target Support Files/Pods-Ibtikar_Task-Ibtikar_TaskUITests/Pods-Ibtikar_Task-Ibtikar_TaskUITests.release.xcconfig"; sourceTree = "<group>"; };
 		46CDB913EF05006438414514 /* Pods_Ibtikar_Task_Ibtikar_TaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ibtikar_Task_Ibtikar_TaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B97BC11A12B29EB1E533FF5 /* Pods_Ibtikar_TaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ibtikar_TaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60DD9A9C263ED16F009DA583 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		60DD9A9D263ED16F009DA583 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		60DD9AA7263ED3D1009DA583 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		60DD9AA8263ED3D1009DA583 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		60DD9AB1263ED467009DA583 /* ViewCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCorners.swift; sourceTree = "<group>"; };
 		60E8E719263D7D23008BEF33 /* Ibtikar_Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ibtikar_Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60E8E71C263D7D23008BEF33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60E8E71E263D7D23008BEF33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +162,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		60DD9A9B263ED14D009DA583 /* CategoryTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				60DD9A9C263ED16F009DA583 /* CategoryTableViewCell.swift */,
+				60DD9A9D263ED16F009DA583 /* CategoryTableViewCell.xib */,
+			);
+			path = CategoryTableViewCell;
+			sourceTree = "<group>";
+		};
+		60DD9AA6263ED3AD009DA583 /* CategoryCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				60DD9AA7263ED3D1009DA583 /* CategoryCollectionViewCell.swift */,
+				60DD9AA8263ED3D1009DA583 /* CategoryCollectionViewCell.xib */,
+			);
+			path = CategoryCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		60E8E710263D7D23008BEF33 = {
 			isa = PBXGroup;
 			children = (
@@ -223,7 +251,6 @@
 			isa = PBXGroup;
 			children = (
 				60E8E752263D7D50008BEF33 /* Cells */,
-				60E8E7B6263D95CB008BEF33 /* NewEpisodes */,
 				60E8E751263D7D44008BEF33 /* Stroyboard */,
 			);
 			path = View;
@@ -241,6 +268,9 @@
 		60E8E752263D7D50008BEF33 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				60DD9AA6263ED3AD009DA583 /* CategoryCollectionViewCell */,
+				60DD9A9B263ED14D009DA583 /* CategoryTableViewCell */,
+				60E8E7B6263D95CB008BEF33 /* NewEpisodes */,
 				60E8E807263E073B008BEF33 /* MainTableViewCell */,
 				60E8E7F8263E014F008BEF33 /* SeriesTypeCell */,
 				60E8E7B8263D962C008BEF33 /* CourseTypeCell */,
@@ -314,6 +344,7 @@
 		60E8E7C4263DA568008BEF33 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				60DD9AB1263ED467009DA583 /* ViewCorners.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -464,8 +495,10 @@
 				60E8E729263D7D24008BEF33 /* LaunchScreen.storyboard in Resources */,
 				60E8E726263D7D24008BEF33 /* Assets.xcassets in Resources */,
 				60E8E79F263D91D0008BEF33 /* NewEpisodesTableViewCell.xib in Resources */,
+				60DD9A9F263ED16F009DA583 /* CategoryTableViewCell.xib in Resources */,
 				60E8E724263D7D23008BEF33 /* Main.storyboard in Resources */,
 				60E8E80B263E0761008BEF33 /* MainTableViewCell.xib in Resources */,
+				60DD9AAA263ED3D1009DA583 /* CategoryCollectionViewCell.xib in Resources */,
 				60E8E7BC263D9664008BEF33 /* GenericCollectionViewCell.xib in Resources */,
 				60E8E7FC263E0197008BEF33 /* SeriesCollectionViewCell.xib in Resources */,
 			);
@@ -605,11 +638,14 @@
 				60E8E768263D7F0E008BEF33 /* MediaModel.swift in Sources */,
 				60E8E71D263D7D23008BEF33 /* AppDelegate.swift in Sources */,
 				60E8E7FB263E0197008BEF33 /* SeriesCollectionViewCell.swift in Sources */,
+				60DD9AB2263ED467009DA583 /* ViewCorners.swift in Sources */,
 				60E8E80A263E0761008BEF33 /* MainTableViewCell.swift in Sources */,
 				60E8E7AE263D9556008BEF33 /* UITableView+Generics.swift in Sources */,
 				60E8E7AF263D9556008BEF33 /* UICollectionView+Generics.swift in Sources */,
 				60E8E77E263D8AB9008BEF33 /* MainViewController+delgate.swift in Sources */,
+				60DD9A9E263ED16F009DA583 /* CategoryTableViewCell.swift in Sources */,
 				60E8E71F263D7D23008BEF33 /* SceneDelegate.swift in Sources */,
+				60DD9AA9263ED3D1009DA583 /* CategoryCollectionViewCell.swift in Sources */,
 				60E8E763263D7EF3008BEF33 /* ChannelsModel.swift in Sources */,
 				60E8E79E263D91D0008BEF33 /* NewEpisodesTableViewCell.swift in Sources */,
 				60E8E783263D8AC4008BEF33 /* MainViewController+dataSource.swift in Sources */,

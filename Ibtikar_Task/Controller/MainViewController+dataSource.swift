@@ -31,7 +31,10 @@ extension MainViewController : UITableViewDataSource{
                 cell.getApiData(channel: self.channels[indexPath.row])
                 return cell
             }else if  indexPath.section == 8  {
-                return UITableViewCell()
+                let cell = tableView.dequeue(IndexPath: indexPath) as CategoryTableViewCell
+                cell.getApiData(categories: self.categories)
+                cell.reloadData()
+                return cell
             }else{
                 
                 let cell = tableView.dequeue(IndexPath: indexPath) as MainTableViewCell
