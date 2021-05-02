@@ -56,7 +56,6 @@ extension MainTableViewCell : UICollectionViewDelegate , UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
     
         let defaultUrl = "shorturl.at/emMNY"
         let cell = collectionView.dequeue(IndexPath: indexPath) as SeriesCollectionViewCell
@@ -68,33 +67,18 @@ extension MainTableViewCell : UICollectionViewDelegate , UICollectionViewDataSou
         mainTitle.text =  channel?.title
         subTitle.text = String(channel?.mediaCount ?? 0) + " episodes"
         cell.seriesTitle.text = channel?.latestMedia?[indexPath.row].title
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        guard let seriesImage = URL(string: (channel?.latestMedia?[indexPath.row].coverAsset?.url)! )
+        guard let seriesImageUrl = URL(string: (channel?.latestMedia?[indexPath.row].coverAsset?.url)! ),let iconImageUrl = URL(string: (channel?.coverAsset?.url) ?? defaultUrl )
         else{return UICollectionViewCell()}
-        let seriesImageTask = URLSession.shared.dataTask(with: seriesImage) { (data, reponse, error) in
-            DispatchQueue.main.async {
-                let image = UIImage(data: data!)
-                cell.seriesImage.image = image
-            }}
-        seriesImageTask.resume()
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        guard let iconImageUrl = URL(string: (channel?.coverAsset?.url) ?? defaultUrl )
-        else{return UICollectionViewCell()}
-        let iconImageTask = URLSession.shared.dataTask(with: iconImageUrl) { (data, reponse, error) in
-            DispatchQueue.main.async {
-                let image = UIImage(data: data!)
-                self.iconImage.image = image
-            }}
-        iconImageTask.resume()
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            return cell
+        cell.seriesImage.sd_setImage(with: seriesImageUrl, placeholderImage: UIImage(), options: .continueInBackground, completed:nil)
+        iconImage.sd_setImage(with: iconImageUrl, placeholderImage: UIImage(), options: .continueInBackground, completed:nil)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var width = 150
+        if index == 4 {
+            width =  300
         }
-        
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            var width = 150
-            if index == 4 {
-                width =  300
-            }
-            return CGSize(width: width , height: 300)
-        }
+        return CGSize(width: width , height: 300)
+    }
 }

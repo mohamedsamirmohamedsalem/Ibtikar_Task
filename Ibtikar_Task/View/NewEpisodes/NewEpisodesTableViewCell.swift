@@ -51,16 +51,9 @@ extension NewEpisodesTableViewCell : UICollectionViewDelegate , UICollectionView
         let cell = collectionView.dequeue(IndexPath: indexPath) as GenericCollectionViewCell
         cell.title.text = channel?.title
         cell.subTitle.text = channel?.slug
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         guard let seriesImage = URL(string: (channel?.latestMedia?[indexPath.row].coverAsset?.url)! )
         else{return UICollectionViewCell()}
-        let seriesImageTask = URLSession.shared.dataTask(with: seriesImage) { (data, reponse, error) in
-            DispatchQueue.main.async {
-                let image = UIImage(data: data!)
-                cell.image.image = image
-            }}
-        seriesImageTask.resume()
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        cell.image.sd_setImage(with: seriesImage, placeholderImage: UIImage(), options: .continueInBackground, completed:nil)
         return cell
     }
     

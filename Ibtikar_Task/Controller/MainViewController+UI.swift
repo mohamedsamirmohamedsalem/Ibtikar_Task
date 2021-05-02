@@ -11,8 +11,6 @@ import  UIKit
 
 
 extension MainViewController {
-    
-  
     func initActivityIndicator(){
         activityIndicator = UIActivityIndicatorView()
         activityIndicator?.center = self.view.center
