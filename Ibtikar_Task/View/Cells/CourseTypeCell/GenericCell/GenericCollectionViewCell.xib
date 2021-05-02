@@ -19,21 +19,21 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0a4-xH-Nd8">
                         <rect key="frame" x="0.0" y="0.0" width="307" height="438"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IIK-qZ-oYY">
-                                <rect key="frame" x="0.0" y="-1" width="307" height="221"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IIK-qZ-oYY">
+                                <rect key="frame" x="0.0" y="10" width="307" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="jDV-qL-FJM"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATT-2a-PyL" customClass="title">
-                                <rect key="frame" x="0.0" y="230" width="37" height="27.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATT-2a-PyL" customClass="title">
+                                <rect key="frame" x="0.0" y="240" width="34" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="1" green="0.99998790029999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subTitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkT-BF-I2b">
-                                <rect key="frame" x="0.0" y="267.5" width="59.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subTitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkT-BF-I2b">
+                                <rect key="frame" x="0.0" y="275.5" width="47.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.58455270530000003" green="0.5956804752" blue="0.61568963529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -46,7 +46,7 @@
                             <constraint firstItem="ATT-2a-PyL" firstAttribute="leading" secondItem="0a4-xH-Nd8" secondAttribute="leading" id="eej-w2-tPH"/>
                             <constraint firstItem="PkT-BF-I2b" firstAttribute="leading" secondItem="0a4-xH-Nd8" secondAttribute="leading" id="eo9-Ne-ecu"/>
                             <constraint firstItem="PkT-BF-I2b" firstAttribute="top" secondItem="ATT-2a-PyL" secondAttribute="bottom" constant="10" id="gyw-SY-FDY"/>
-                            <constraint firstItem="IIK-qZ-oYY" firstAttribute="top" secondItem="0a4-xH-Nd8" secondAttribute="top" id="rNu-Y8-Sqg"/>
+                            <constraint firstItem="IIK-qZ-oYY" firstAttribute="top" secondItem="0a4-xH-Nd8" secondAttribute="top" constant="10" id="rNu-Y8-Sqg"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -68,7 +68,4 @@
             <point key="canvasLocation" x="431.15942028985512" y="119.19642857142857"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-    </resources>
 </document>

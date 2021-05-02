@@ -44,8 +44,11 @@
             </constraints>
             <size key="customSize" width="294" height="332"/>
             <connections>
+                <outlet property="imageHeight" destination="zL2-Cn-umu" id="JjW-zx-8Ka"/>
+                <outlet property="imageWidth" destination="XV7-nJ-cgq" id="yEd-5u-cHw"/>
                 <outlet property="seriesImage" destination="sOz-D6-xdI" id="zq9-QC-OtQ"/>
                 <outlet property="seriesTitle" destination="ppB-MB-Osq" id="laW-CB-r4S"/>
+                <outlet property="titleWidth" destination="6dv-bZ-Vma" id="ktq-6Y-vGO"/>
             </connections>
             <point key="canvasLocation" x="-65.217391304347828" y="111.16071428571428"/>
         </collectionViewCell>

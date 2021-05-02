@@ -22,10 +22,14 @@ extension MainViewController : UITableViewDataSource{
         }else{
             if indexPath.section == 0 {
                 let cell = tableView.dequeue(IndexPath: indexPath) as NewEpisodesTableViewCell
+                cell.getApiData(channel: self.channels.last!)
                 cell.reloadData()
                 return cell
             }else if  indexPath.section == 4  {
-            return UITableViewCell()
+                let cell = tableView.dequeue(IndexPath: indexPath) as MainTableViewCell
+                cell.getIndex(4)
+                cell.getApiData(channel: self.channels[indexPath.row])
+                return cell
             }else if  indexPath.section == 8  {
                 return UITableViewCell()
             }else{

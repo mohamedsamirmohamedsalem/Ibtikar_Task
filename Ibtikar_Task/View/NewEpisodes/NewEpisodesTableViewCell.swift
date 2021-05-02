@@ -9,6 +9,9 @@ import UIKit
 
 class NewEpisodesTableViewCell: UITableViewCell {
 
+    
+    
+    var channel : Channel?
     //MARK : IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -34,6 +37,9 @@ class NewEpisodesTableViewCell: UITableViewCell {
         func reloadData() {
             collectionView.reloadData()
        }
+    func getApiData(channel: Channel){
+        self.channel = channel
+    }
 }
 /////////////////////////////////////////////////////////////////////////////////////
 extension NewEpisodesTableViewCell : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
@@ -43,8 +49,18 @@ extension NewEpisodesTableViewCell : UICollectionViewDelegate , UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeue(IndexPath: indexPath) as GenericCollectionViewCell
-        cell.title.text = "adadad"
-        cell.subTitle.text = "sadsdssddsdsdsdsd"
+        cell.title.text = channel?.title
+        cell.subTitle.text = channel?.slug
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        guard let seriesImage = URL(string: (channel?.latestMedia?[indexPath.row].coverAsset?.url)! )
+        else{return UICollectionViewCell()}
+        let seriesImageTask = URLSession.shared.dataTask(with: seriesImage) { (data, reponse, error) in
+            DispatchQueue.main.async {
+                let image = UIImage(data: data!)
+                cell.image.image = image
+            }}
+        seriesImageTask.resume()
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         return cell
     }
     

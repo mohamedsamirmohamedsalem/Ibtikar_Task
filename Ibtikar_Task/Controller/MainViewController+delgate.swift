@@ -13,7 +13,7 @@ extension MainViewController : UITableViewDelegate{
     
     //return number of sections in tableview
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 8
+        return 9
     }
     
     //define hight for cell  (Delgate Method)
@@ -21,7 +21,7 @@ extension MainViewController : UITableViewDelegate{
         if indexPath.section == 0 { //first section (0)
             return 400
         }else if indexPath.section == 4 {
-            return 300
+            return 280
         }else if indexPath.section == 8{
             return 450
         }else{
