@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MainTableViewCell: UITableViewCell {
     
@@ -14,29 +15,31 @@ class MainTableViewCell: UITableViewCell {
     
     //MARK : IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var mainTitle: UILabel!
+    @IBOutlet weak var subTitle: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setLayout()
         registerNibFiles()
     }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     //MARK:- Methods
     //this function to set the layouts of MainViewController
-      private func setLayout(){
+    private func setLayout(){
         collectionView.delegate = self
         collectionView.dataSource = self
-      }
-     //This Funvtion to register cell in tableview
-        private func registerNibFiles(){
-            collectionView.RegisterNib(Cell: SeriesCollectionViewCell.self)
-        }
+    }
+    //This Funvtion to register cell in tableview
+    private func registerNibFiles(){
+        collectionView.RegisterNib(Cell: SeriesCollectionViewCell.self)
+    }
     
-        func reloadData() {
-            collectionView.reloadData()
-       }
+    func reloadData() {
+        collectionView.reloadData()
+    }
     func getApiData(channel: Channel){
         self.channel = channel
     }
@@ -48,32 +51,43 @@ extension MainTableViewCell : UICollectionViewDelegate , UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let defaultUrl = "shorturl.at/emMNY"
         let cell = collectionView.dequeue(IndexPath: indexPath) as SeriesCollectionViewCell
-        cell.mainTitle.text =  channel?.title
-        cell.subTitle.text = String(channel?.mediaCount ?? 0) + " episodes"
-        //cell.image.image = getImage(channel?.iconAsset )
-        cell.seriesImage.image = getImage(channel?.iconAsset?.url ?? "")
-        cell.seriesTitle.text = channel?.latestMedia?[indexPath.row].title
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150 , height: 400)
-    }
-    
-    
-    func getImage(_ url :String)->UIImage{
-        var image = UIImage()
-        if let url = URL(string: url) {
-            let task = URLSession.shared.dataTask(with: url) { data, response, error in
-                guard let data = data, error == nil else { return }
-                DispatchQueue.main.async { /// execute on main thread
-                    image =  UIImage(data: data) ?? UIImage()
-            
-                }
-            }
-            task.resume()
+        mainTitle.text =  channel?.title
+        subTitle.text = String(channel?.mediaCount ?? 0) + " episodes"
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        guard let seriesImage = URL(string: (channel?.latestMedia?[indexPath.row].coverAsset?.url)! )
+        else{return UICollectionViewCell()}
+        let seriesImageTask = URLSession.shared.dataTask(with: seriesImage) { (data, reponse, error) in
+            DispatchQueue.main.async {
+                let image = UIImage(data: data!)
+                cell.seriesImage.image = image
+            }}
+        seriesImageTask.resume()
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        guard let iconImageUrl = URL(string: (channel?.coverAsset?.url) ?? defaultUrl )
+        else{return UICollectionViewCell()}
+        let iconImageTask = URLSession.shared.dataTask(with: iconImageUrl) { (data, reponse, error) in
+            DispatchQueue.main.async {
+                let image = UIImage(data: data!)
+                self.iconImage.image = image
+            }}
+        iconImageTask.resume()
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            cell.seriesTitle.text = channel?.latestMedia?[indexPath.row].title
+            return cell
         }
-        return image
+        
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: 150 , height: 300)
+        }
+        
+        
+      
+    
+    func fetchImage(_ url :String){
+        
+       
     }
+
 }

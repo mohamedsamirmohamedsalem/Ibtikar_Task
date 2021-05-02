@@ -9,15 +9,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="194" id="KGk-i7-Jjw" customClass="MainTableViewCell" customModule="Ibtikar_Task" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="363" height="194"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="405" id="KGk-i7-Jjw" customClass="MainTableViewCell" customModule="Ibtikar_Task" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="405"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="363" height="194"/>
+                <rect key="frame" x="0.0" y="0.0" width="363" height="405"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="By3-mg-WaY">
-                        <rect key="frame" x="0.0" y="0.0" width="363" height="194"/>
+                        <rect key="frame" x="0.0" y="55" width="363" height="350"/>
                         <color key="backgroundColor" red="0.14150178429999999" green="0.15235528349999999" blue="0.18039593100000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hbW-2i-yg2">
                             <size key="itemSize" width="128" height="128"/>
@@ -26,19 +26,56 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T6t-dY-Rea" customClass="HalfImageCorners" customModule="Ibtikar_Task" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="T6t-dY-Rea" secondAttribute="height" multiplier="1:1" id="9dA-Ab-4ON"/>
+                            <constraint firstAttribute="height" constant="50" id="RE2-G8-ewF"/>
+                            <constraint firstAttribute="width" constant="50" id="i7q-qk-xSZ"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gYk-hL-oJr">
+                        <rect key="frame" x="57" y="5" width="80.5" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="mainTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANg-B4-hUc">
+                                <rect key="frame" x="0.0" y="0.0" width="80.5" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <color key="textColor" red="1" green="0.99998790029999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTR-fJ-QMg">
+                                <rect key="frame" x="0.0" y="28" width="80.5" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.52572959659999996" green="0.53685683009999996" blue="0.55686599020000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="C4J-Z9-F2M"/>
+                        </constraints>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="By3-mg-WaY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="CRO-ii-5rD"/>
-                    <constraint firstItem="By3-mg-WaY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PAt-v6-l5E"/>
-                    <constraint firstAttribute="trailing" secondItem="By3-mg-WaY" secondAttribute="trailing" id="ROJ-xA-K4B"/>
-                    <constraint firstAttribute="bottom" secondItem="By3-mg-WaY" secondAttribute="bottom" id="Xk5-vZ-vkF"/>
+                    <constraint firstItem="gYk-hL-oJr" firstAttribute="leading" secondItem="T6t-dY-Rea" secondAttribute="trailing" constant="7" id="0tS-gs-VSQ"/>
+                    <constraint firstAttribute="trailing" secondItem="By3-mg-WaY" secondAttribute="trailing" id="1nF-1w-1vc"/>
+                    <constraint firstItem="By3-mg-WaY" firstAttribute="top" secondItem="gYk-hL-oJr" secondAttribute="bottom" id="5Gp-f6-9VL"/>
+                    <constraint firstItem="gYk-hL-oJr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Hcc-4W-WCP"/>
+                    <constraint firstItem="T6t-dY-Rea" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="R8J-uC-rlO"/>
+                    <constraint firstAttribute="bottom" secondItem="By3-mg-WaY" secondAttribute="bottom" id="Z1w-fu-tei"/>
+                    <constraint firstItem="T6t-dY-Rea" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gcc-So-S1Y"/>
+                    <constraint firstItem="By3-mg-WaY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ls8-C5-deD"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="collectionView" destination="By3-mg-WaY" id="3Jt-Q2-wwj"/>
+                <outlet property="iconImage" destination="T6t-dY-Rea" id="HV1-R1-b5U"/>
+                <outlet property="mainTitle" destination="ANg-B4-hUc" id="nkW-GD-5CL"/>
+                <outlet property="subTitle" destination="iTR-fJ-QMg" id="S3C-Z7-JXD"/>
             </connections>
-            <point key="canvasLocation" x="-115.21739130434783" y="28.794642857142854"/>
+            <point key="canvasLocation" x="-115.21739130434783" y="-41.852678571428569"/>
         </tableViewCell>
     </objects>
 </document>

@@ -26,7 +26,7 @@ extension MainViewController : UITableViewDelegate{
             return 450
         }else{
             //all other sections
-            return 450
+            return 380
         }
         
     }

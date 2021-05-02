@@ -21,5 +21,17 @@ import UIKit
     override func layoutSubviews() {
             super.layoutSubviews()
         self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
+
     }
+}
+
+class HalfImageCorners: UIImageView {
+
+   override func layoutSubviews() {
+           super.layoutSubviews()
+       self.layer.cornerRadius = bounds.height / 2
+       self.layer.masksToBounds = true
+
+   }
 }
